@@ -81,12 +81,13 @@ namespace WeatherAlert
         private void btn_rename_Click(object sender, EventArgs e)
         {
             Form4 form4 = new Form4();
+            form4.Dgv = dataGridView1;
             form4.ShowDialog();
         }
 
         private void btn_load_Click(object sender, EventArgs e)
         {
-
+            //...
         }
     }
 }

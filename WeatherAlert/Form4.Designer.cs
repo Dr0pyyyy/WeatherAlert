@@ -29,8 +29,8 @@
         private void InitializeComponent()
         {
             this.label1 = new System.Windows.Forms.Label();
-            this.textBox1 = new System.Windows.Forms.TextBox();
-            this.button1 = new System.Windows.Forms.Button();
+            this.txt_box_new_username = new System.Windows.Forms.TextBox();
+            this.btn_save = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // label1
@@ -42,29 +42,30 @@
             this.label1.TabIndex = 0;
             this.label1.Text = "New username:";
             // 
-            // textBox1
+            // txt_box_new_username
             // 
-            this.textBox1.Location = new System.Drawing.Point(99, 20);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(100, 20);
-            this.textBox1.TabIndex = 1;
+            this.txt_box_new_username.Location = new System.Drawing.Point(99, 20);
+            this.txt_box_new_username.Name = "txt_box_new_username";
+            this.txt_box_new_username.Size = new System.Drawing.Size(100, 20);
+            this.txt_box_new_username.TabIndex = 1;
             // 
-            // button1
+            // btn_save
             // 
-            this.button1.Location = new System.Drawing.Point(61, 65);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(75, 23);
-            this.button1.TabIndex = 2;
-            this.button1.Text = "Save";
-            this.button1.UseVisualStyleBackColor = true;
+            this.btn_save.Location = new System.Drawing.Point(61, 65);
+            this.btn_save.Name = "btn_save";
+            this.btn_save.Size = new System.Drawing.Size(75, 23);
+            this.btn_save.TabIndex = 2;
+            this.btn_save.Text = "Save";
+            this.btn_save.UseVisualStyleBackColor = true;
+            this.btn_save.Click += new System.EventHandler(this.button1_Click);
             // 
             // Form4
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(214, 105);
-            this.Controls.Add(this.button1);
-            this.Controls.Add(this.textBox1);
+            this.Controls.Add(this.btn_save);
+            this.Controls.Add(this.txt_box_new_username);
             this.Controls.Add(this.label1);
             this.Name = "Form4";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
@@ -78,7 +79,7 @@
         #endregion
 
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.TextBox textBox1;
-        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.TextBox txt_box_new_username;
+        private System.Windows.Forms.Button btn_save;
     }
 }
