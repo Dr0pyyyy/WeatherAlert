@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.IO;
 
 namespace WeatherAlert
 {
@@ -22,15 +23,18 @@ namespace WeatherAlert
             this.Close();
         }
 
+        public DataGridView Dgv { get; set; }
+
         private void btn_yes_Click(object sender, EventArgs e)
         {
-            //figure out how to delete data from gridview and than how to delete file as well
-            Form1 form1 = new Form1();
             try
             {
-                foreach (DataGridViewRow item in form1.dataGridView.SelectedRows)
+                foreach (DataGridViewRow row in Dgv.SelectedRows)
                 {
-                    //form1.dataGridView.Rows.RemoveAt(item.Index);
+                    //Need to handle exception when is no data in gridview
+                    string filePath = @"data\" + row.Cells[0].Value.ToString() + ".csv";
+                    Dgv.Rows.RemoveAt(row.Index);
+                    File.Delete(filePath);
                 }
             }
             catch
