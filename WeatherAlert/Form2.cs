@@ -25,39 +25,19 @@ namespace WeatherAlert
 
         private void btn_save_Click(object sender, EventArgs e)
         {
-            //It works, but when user add new file, it wont show in datagridview, bcs theres no data init
-            try
+            foreach (string file in Directory.GetFiles("data", "*.csv"))
             {
-                foreach (string file in Directory.GetFiles("data", "*.csv"))
+                //This works, but i have to add everything in array in foreach
+                if (txt_box_username.Text == "" || txt_box_username.Text + ".csv" == Path.GetFileName(file))
                 {
-                    Path.GetFileName(file);
-                    if (txt_box_username.Text == "" || txt_box_username.Text == Path.GetFileName(file))
-                    {
-                        MessageBox.Show("Invalid username");
-                        return;
-                    }
-                    else
-                    {
-                        File.Create("data/" + txt_box_username.Text + ".csv");
-                        this.Close();
-                    }
+                    MessageBox.Show("Invalid name!");
+                    return;
                 }
+            }
 
-                /*
-                if (txt_box_username.Text == "")
-                {
-                    MessageBox.Show("Invalid username!");
-                }
-                else
-                {
-                    File.Create("data/" + txt_box_username.Text + ".csv");
-                    this.Close();
-                }*/
-            }
-            catch 
-            {
-                MessageBox.Show("This file already exist!");
-            }
+            File.Create(@"data\" + txt_box_username.Text + ".csv");
+            this.Close();
+            return;
         }
 
         private void Form2_Load(object sender, EventArgs e)
