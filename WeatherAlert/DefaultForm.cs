@@ -62,15 +62,15 @@ namespace WeatherAlert
 
         private void btn_new_profile_Click(object sender, EventArgs e)
         {
-            NewUsernameForm form2 = new NewUsernameForm();
-            form2.ShowDialog();
+            NewUsernameForm newUsernameForm = new NewUsernameForm();
+            newUsernameForm.ShowDialog();
         }
 
         private void btn_delete_Click(object sender, EventArgs e)
         {
-            DeleteForm form3 = new DeleteForm();
-            form3.Dgv = dataGridView1;
-            form3.ShowDialog();
+            DeleteForm deleteForm = new DeleteForm();
+            deleteForm.Dgv = dataGridView1;
+            deleteForm.ShowDialog();
         }
 
         private void btn_exit_Click(object sender, EventArgs e)
@@ -80,9 +80,9 @@ namespace WeatherAlert
 
         private void btn_rename_Click(object sender, EventArgs e)
         {
-            RenameForm form4 = new RenameForm();
-            form4.Dgv = dataGridView1;
-            form4.ShowDialog();
+            RenameForm renameForm = new RenameForm();
+            renameForm.Dgv = dataGridView1;
+            renameForm.ShowDialog();
         }
 
         private void btn_load_Click(object sender, EventArgs e)
