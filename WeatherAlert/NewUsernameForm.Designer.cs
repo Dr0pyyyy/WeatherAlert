@@ -1,7 +1,7 @@
 ﻿
 namespace WeatherAlert
 {
-    partial class Form2
+    partial class NewUsernameForm
     {
         /// <summary>
         /// Required designer variable.
@@ -71,7 +71,7 @@ namespace WeatherAlert
             this.btn_cancel.UseVisualStyleBackColor = true;
             this.btn_cancel.Click += new System.EventHandler(this.btn_cancel_Click);
             // 
-            // Form2
+            // NewUsernameForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -80,9 +80,9 @@ namespace WeatherAlert
             this.Controls.Add(this.lbl_username);
             this.Controls.Add(this.txt_box_username);
             this.Controls.Add(this.btn_save);
-            this.Name = "Form2";
+            this.Name = "NewUsernameForm";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "Form2";
+            this.Text = "New username";
             this.Load += new System.EventHandler(this.Form2_Load);
             this.ResumeLayout(false);
             this.PerformLayout();

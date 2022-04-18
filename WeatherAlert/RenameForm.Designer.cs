@@ -1,6 +1,6 @@
 ﻿namespace WeatherAlert
 {
-    partial class Form4
+    partial class RenameForm
     {
         /// <summary>
         /// Required designer variable.
@@ -31,6 +31,7 @@
             this.label1 = new System.Windows.Forms.Label();
             this.txt_box_new_username = new System.Windows.Forms.TextBox();
             this.btn_save = new System.Windows.Forms.Button();
+            this.btn_cancel = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // label1
@@ -51,7 +52,7 @@
             // 
             // btn_save
             // 
-            this.btn_save.Location = new System.Drawing.Point(61, 65);
+            this.btn_save.Location = new System.Drawing.Point(124, 61);
             this.btn_save.Name = "btn_save";
             this.btn_save.Size = new System.Drawing.Size(75, 23);
             this.btn_save.TabIndex = 2;
@@ -59,17 +60,28 @@
             this.btn_save.UseVisualStyleBackColor = true;
             this.btn_save.Click += new System.EventHandler(this.button1_Click);
             // 
-            // Form4
+            // btn_cancel
+            // 
+            this.btn_cancel.Location = new System.Drawing.Point(15, 61);
+            this.btn_cancel.Name = "btn_cancel";
+            this.btn_cancel.Size = new System.Drawing.Size(75, 23);
+            this.btn_cancel.TabIndex = 3;
+            this.btn_cancel.Text = "Cancel";
+            this.btn_cancel.UseVisualStyleBackColor = true;
+            this.btn_cancel.Click += new System.EventHandler(this.btn_cancel_Click);
+            // 
+            // RenameForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(214, 105);
+            this.Controls.Add(this.btn_cancel);
             this.Controls.Add(this.btn_save);
             this.Controls.Add(this.txt_box_new_username);
             this.Controls.Add(this.label1);
-            this.Name = "Form4";
+            this.Name = "RenameForm";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "Form4";
+            this.Text = "Rename";
             this.Load += new System.EventHandler(this.Form4_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -81,5 +93,6 @@
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.TextBox txt_box_new_username;
         private System.Windows.Forms.Button btn_save;
+        private System.Windows.Forms.Button btn_cancel;
     }
 }

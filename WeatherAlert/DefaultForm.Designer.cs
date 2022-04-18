@@ -1,7 +1,7 @@
 ﻿
 namespace WeatherAlert
 {
-    partial class Form1
+    partial class DefaultForm
     {
         /// <summary>
         /// Required designer variable.

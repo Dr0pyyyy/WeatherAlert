@@ -11,9 +11,9 @@ using System.IO;
 
 namespace WeatherAlert
 {
-    public partial class Form2 : Form
+    public partial class NewUsernameForm : Form
     {
-        public Form2()
+        public NewUsernameForm()
         {
             InitializeComponent();
         }
@@ -28,9 +28,14 @@ namespace WeatherAlert
             foreach (string file in Directory.GetFiles("data", "*.csv"))
             {
                 //This works, but i have to add everything in array in foreach
-                if (txt_box_username.Text == "" || txt_box_username.Text + ".csv" == Path.GetFileName(file))
+                if (txt_box_username.Text == "")
                 {
                     MessageBox.Show("Invalid name!");
+                    return;
+                }
+                else if (txt_box_username.Text + ".csv" == Path.GetFileName(file))
+                {
+                    MessageBox.Show("This username already exist!");
                     return;
                 }
             }

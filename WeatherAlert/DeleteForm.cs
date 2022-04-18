@@ -11,9 +11,9 @@ using System.IO;
 
 namespace WeatherAlert
 {
-    public partial class Form3 : Form
+    public partial class DeleteForm : Form
     {
-        public Form3()
+        public DeleteForm()
         {
             InitializeComponent();
         }

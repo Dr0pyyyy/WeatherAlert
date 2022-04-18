@@ -11,9 +11,9 @@ using System.IO;
 
 namespace WeatherAlert
 {
-    public partial class Form4 : Form
+    public partial class RenameForm : Form
     {
-        public Form4()
+        public RenameForm()
         {
             InitializeComponent();
         }
@@ -29,11 +29,29 @@ namespace WeatherAlert
         {
             foreach (DataGridViewRow row in Dgv.SelectedRows)
             {
-                //Works fine, but need to change file name also
+                foreach (string file in Directory.GetFiles("data", "*.csv"))
+                {
+                    //This works, but i have to add everything in array in foreach
+                    if (txt_box_new_username.Text == "")
+                    {
+                        MessageBox.Show("Invalid name!");
+                        return;
+                    }
+                    else if (txt_box_new_username.Text + ".csv" == Path.GetFileName(file))
+                    {
+                        MessageBox.Show("This username already exist!");
+                        return;
+                    }
+                }
                 File.Move(@"data\" + row.Cells[0].Value.ToString() + ".csv",@"data\" + txt_box_new_username.Text + ".csv");
                 row.Cells[0].Value = txt_box_new_username.Text;
                 this.Close();
             }
+        }
+
+        private void btn_cancel_Click(object sender, EventArgs e)
+        {
+            this.Close();
         }
     }
 }

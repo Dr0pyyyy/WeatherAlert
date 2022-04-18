@@ -1,7 +1,7 @@
 ﻿
 namespace WeatherAlert
 {
-    partial class Form3
+    partial class DeleteForm
     {
         /// <summary>
         /// Required designer variable.
@@ -63,7 +63,7 @@ namespace WeatherAlert
             this.btn_yes.UseVisualStyleBackColor = true;
             this.btn_yes.Click += new System.EventHandler(this.btn_yes_Click);
             // 
-            // Form3
+            // DeleteForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -71,9 +71,9 @@ namespace WeatherAlert
             this.Controls.Add(this.btn_yes);
             this.Controls.Add(this.btn_cancel);
             this.Controls.Add(this.lbl_warning_message);
-            this.Name = "Form3";
+            this.Name = "DeleteForm";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "Form3";
+            this.Text = "Delete alert";
             this.Load += new System.EventHandler(this.Form3_Load);
             this.ResumeLayout(false);
             this.PerformLayout();

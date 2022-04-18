@@ -11,9 +11,9 @@ using System.IO;
 
 namespace WeatherAlert
 {
-    public partial class Form1 : Form
+    public partial class DefaultForm : Form
     {
-        public Form1()
+        public DefaultForm()
         {
             InitializeComponent();
         }
@@ -62,13 +62,13 @@ namespace WeatherAlert
 
         private void btn_new_profile_Click(object sender, EventArgs e)
         {
-            Form2 form2 = new Form2();
+            NewUsernameForm form2 = new NewUsernameForm();
             form2.ShowDialog();
         }
 
         private void btn_delete_Click(object sender, EventArgs e)
         {
-            Form3 form3 = new Form3();
+            DeleteForm form3 = new DeleteForm();
             form3.Dgv = dataGridView1;
             form3.ShowDialog();
         }
@@ -80,7 +80,7 @@ namespace WeatherAlert
 
         private void btn_rename_Click(object sender, EventArgs e)
         {
-            Form4 form4 = new Form4();
+            RenameForm form4 = new RenameForm();
             form4.Dgv = dataGridView1;
             form4.ShowDialog();
         }
